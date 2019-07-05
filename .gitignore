@@ -168,3 +168,4 @@ local.properties
 
 .idea
 *.iml
+*.class
