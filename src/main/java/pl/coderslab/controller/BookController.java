@@ -64,16 +64,7 @@ public class BookController {
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
     public Book editBook(@RequestBody Book book) {
 
-//        Book book = memoryBookService.getList().stream()
-//                .filter(book1 -> book1.getId() == id)
-//                .collect(Collectors.toList()).get(0);
-//
-//        book.setId(id);
-//        book.setIsbn(isbn);
-//        book.setTitle(title);
-//        book.setAuthor(author);
-//        book.setPublisher(publisher);
-//        book.setType(type);
+        memoryBookService.editBook(book.getId(), book.getIsbn(), book.getTitle(), book.getAuthor(), book.getPublisher(), book.getType());
 
         return book;
     }
